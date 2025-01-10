@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd 
 import streamlit as st 
-import plotly.express as px
+# import plotly.express as px
 
 @st.cache_data
 def load_data(file):
@@ -29,12 +29,12 @@ if file is not None :
             y_axis = st.selectbox("Select colmun on y axis :",numerical_columns)
         with col3:    
             color = st.selectbox("Select column to be color : " ,df.columns)
-        fig_scatter = px.scatter(df , x= x_axis,y= y_axis ,
-                                 color=color)
-        st.plotly_chart(fig_scatter)
+        # fig_scatter = px.scatter(df , x= x_axis,y= y_axis ,
+        #                          color=color)
+        # st.plotly_chart(fig_scatter)
     
     with tab2 :
         histogram_feature = st.selectbox("Selection feature to histogram ", numerical_columns)
-        fig_hist = px.histogram(df,x=histogram_feature)
-        st.plotly_chart(fig_hist)
+        # fig_hist = px.histogram(df,x=histogram_feature)
+        # st.plotly_chart(fig_hist)
         
